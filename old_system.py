@@ -13,8 +13,9 @@ def run_system_monolith():
     loading = 0
     while loading < 5:
         print("Loading module " + str(loading))
-        
-    
+        loading = loading + 1
+
+
     while True:
         print("\n--- MENU ---")
         print("1. View Crew")
@@ -88,4 +89,4 @@ def run_system_monolith():
             
         print("End of cycle.")
 
-run_system_monolith() 
+run_system_monolith()

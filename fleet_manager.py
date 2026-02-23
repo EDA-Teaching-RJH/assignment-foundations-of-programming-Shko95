@@ -40,6 +40,37 @@ def search_by_id(ids, names, ranks, divs):
           if found == False:
             print("Member not found.")  
 
+def remove_member(names, ranks, divs, ids):
+    target = input("Enter ID to remove: ")
+
+    for i in range(len(ids)):
+        if ids[i] == target:
+            del names[i]
+            del ranks[i]
+            del divs[i]
+            del ids[i]
+            print("Member removed.")
+            return
+    print("Member not found.")
+        
+def add_member(names, ranks, divs, ids):
+    new_id = input("Enter new member ID: ")
+    for exsisting_id in ids:
+        if existing_id == new_id:
+            print("ID already exists.")
+            return
+    new_name = input("Enter new member name: ")
+    new_rank = input("Enter new member rank: ")
+    new_div = input("Enter new member division: ")
+    if new_rank not in ["Captain", "Lieutenant", "Colonel"]:
+        print("Invalid rank.")
+        return
+    names.append(new_name)
+    ranks.append(new_rank)
+    divs.append(new_div)
+    ids.append(new_id)
+    print("Member added.")
+    
 
 def main():
     student = input("type full name: ") 
@@ -50,9 +81,9 @@ def main():
         choice = display_menu(student)
 
         if choice == "1":
-            pass
+            add_member(names, ranks, divs, ids)
         elif choice == "2":
-            pass
+            remove_member(names, ranks, divs, ids)
         elif choice == "3":
             display_roster(names, ranks, divs, ids)
         elif choice == "4":

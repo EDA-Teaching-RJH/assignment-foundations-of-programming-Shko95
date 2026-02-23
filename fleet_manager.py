@@ -7,8 +7,7 @@ def init_database():
     ids =["I01", "I02", "I03", "I04", "I05"]
     return names, ranks, divs, ids
 
-def display_menu(): 
-    student = input("type full name: ")
+def display_menu(student): 
     print("logged in as:", student) 
     print("1. Add Member")
     print("2. Remove Member")
@@ -21,9 +20,13 @@ def display_menu():
     return choice
 
 def main():
+    student = input("type full name: ") 
+
     names, ranks, divs, ids = init_database()
+
     while True:
-        choice = display_menu()
+        choice = display_menu(student)
+
         if choice == "1":
             pass
         elif choice == "2":

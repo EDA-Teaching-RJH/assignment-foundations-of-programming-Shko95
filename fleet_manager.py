@@ -32,7 +32,7 @@ def main():
         elif choice == "2":
             pass
         elif choice == "3":
-            pass
+            display_roster(names, ranks, divs, ids)
         elif choice == "4":
             pass
         elif choice == "5":
@@ -41,6 +41,14 @@ def main():
             break
         else:
             print("Invalid choice.")
+
+    def display_roster(names, ranks, divs, ids):
+        print("Crew Roster:")
+        print("Name / Rank / Division / ID")
+
+        for i in range(len(names)):
+            print(names[i], "/", ranks[i], "/", divs[i], "/", ids[i])
+      
                     
 main()  
 

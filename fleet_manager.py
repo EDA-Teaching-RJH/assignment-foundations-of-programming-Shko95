@@ -19,6 +19,14 @@ def display_menu(student):
     choice = input("select option: ")
     return choice
 
+def display_roster(names, ranks, divs, ids):
+        print("Crew Roster:")
+        print("Name / Rank / Division / ID")
+
+        for i in range(len(names)):
+            print(names[i], "/", ranks[i], "/", divs[i], "/", ids[i])
+
+
 def main():
     student = input("type full name: ") 
 
@@ -41,15 +49,7 @@ def main():
             break
         else:
             print("Invalid choice.")
-
-    def display_roster(names, ranks, divs, ids):
-        print("Crew Roster:")
-        print("Name / Rank / Division / ID")
-
-        for i in range(len(names)):
-            print(names[i], "/", ranks[i], "/", divs[i], "/", ids[i])
-      
-                    
+                
 main()  
 
 

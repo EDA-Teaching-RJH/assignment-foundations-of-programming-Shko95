@@ -26,6 +26,20 @@ def display_roster(names, ranks, divs, ids):
         for i in range(len(names)):
             print(names[i], "/", ranks[i], "/", divs[i], "/", ids[i])
 
+def search_by_id(ids, names, ranks, divs):
+    Target = input("Enter ID to search: ")  
+
+    found = False
+
+    for i in range(len(ids)):
+        if ids[i] == Target:
+          print("Member Found:")
+          print(names[i], "/", ranks[i], "/", divs[i], "/", ids[i])
+          found = True
+
+          if found == False:
+            print("Member not found.")  
+
 
 def main():
     student = input("type full name: ") 
@@ -42,7 +56,7 @@ def main():
         elif choice == "3":
             display_roster(names, ranks, divs, ids)
         elif choice == "4":
-            pass
+            search_by_id(ids, names, ranks, divs)
         elif choice == "5":
             pass
         elif choice == "6":

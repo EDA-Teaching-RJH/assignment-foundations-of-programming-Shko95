@@ -1,5 +1,5 @@
 
-def inti_database(): 
+def init_database(): 
 
     names = ["Carol", "Jack", "Spock", "Hikaru", "Kira"]
     ranks = ["Captain", "Commander", "Lieutenant", "Major"]
@@ -21,7 +21,7 @@ def display_menu():
     return choice
 
 def main():
-    names, ranks, divs, ids = inti_database()
+    names, ranks, divs, ids = init_database()
     while True:
         choice = display_menu()
         if choice == "1":
@@ -38,8 +38,8 @@ def main():
             break
         else:
             print("Invalid choice.")
-
-            main()  
+                    
+main()  
 
 
 

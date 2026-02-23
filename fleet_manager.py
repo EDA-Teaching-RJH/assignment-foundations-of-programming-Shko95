@@ -1,9 +1,9 @@
 
 def init_database(): 
 
-    names = ["Carol", "Jack", "Spock", "Hikaru", "Kira"]
-    ranks = ["Captain", "Commander", "Lieutenant", "Major"]
-    divs = ["Commander", "Officer", "Ambassador"]
+    names = ["Carol", "Jack", "Shaxs", "Hikaru", "Kira"]
+    ranks = ["Captain", "Captain" ,"Lieutenant", "Captain", "Colonel"]
+    divs = ["Command", "Command","Security", "Command", "Command"]
     ids =["I01", "I02", "I03", "I04", "I05"]
     return names, ranks, divs, ids
 

@@ -7,3 +7,13 @@ def inti_database():
     ids =["I01", "I02", "I03", "I04", "I05"]
     return names, ranks, divs, ids
 
+def display_menu(): 
+    student = input("type full name: ")
+    print("logged in as:", student) 
+    print("1. Add Member")
+    print("2. Remove Member")
+    print("3. Display Roster")
+    print("4. Search Crew")
+    print("5. Update Rank")
+    print("6. Exit")
+

@@ -70,7 +70,24 @@ def add_member(names, ranks, divs, ids):
     divs.append(new_div)
     ids.append(new_id)
     print("Member added.")
-    
+
+def update_rank(names, ranks, divs, ids):
+    target = input("Enter ID to update rank: ")
+
+    for i in range(len(ids)):
+        if ids[i] == target:
+            new_rank = input("Enter new rank: ")
+            if new_rank not in ["Captain", "Lieutenant", "Colonel"]:
+                print("Invalid rank.")
+                return
+            ranks[i] = new_rank
+            print("Rank updated.")
+            return
+    print("Member not found.")
+    ranks[i] = new_rank
+    print("Rank updated for", names[i])
+    return
+print("id not found.")
 
 def main():
     student = input("type full name: ") 
@@ -89,7 +106,7 @@ def main():
         elif choice == "4":
             search_by_id(ids, names, ranks, divs)
         elif choice == "5":
-            pass
+            update_rank(names, ranks, divs, ids)
         elif choice == "6":
             break
         else:

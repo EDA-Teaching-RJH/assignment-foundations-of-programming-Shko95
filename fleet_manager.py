@@ -17,3 +17,19 @@ def display_menu():
     print("5. Update Rank")
     print("6. Exit")
 
+def main():
+    names, ranks, divs, ids = inti_database()
+    while True:
+        choice = diplay_menu()
+        if choice == "1, 2, 3, 4, 5":
+            pass
+        elif choice == "6":
+            break
+        else:
+            print("Invalid choice.")
+
+            main()  
+
+
+
+
